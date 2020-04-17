@@ -25,10 +25,10 @@ public class MMT {
 			  Thread.sleep(1000);
       
 		//3) Enter city as Goa, and choose Goa, India
-						WebElement EnterCity=driver.findElementByXPath("//label[@for='city']");
-					  EnterCity.click();
-			      driver.findElementByXPath("//div[@role='combobox']/input").sendKeys("goa");
-			      driver.findElementByXPath("(//div[@class='flexOne']/p)[1]").click();
+			WebElement EnterCity=driver.findElementByXPath("//label[@for='city']");
+			EnterCity.click();
+			driver.findElementByXPath("//div[@role='combobox']/input").sendKeys("goa");
+			driver.findElementByXPath("(//div[@class='flexOne']/p)[1]").click();
             
 			//4) Enter Check in date as Next month 15th (May 15) and Check out as start date+5
       
@@ -36,7 +36,7 @@ public class MMT {
 		  	driver.findElementByXPath("(//div[text()='20'])[2]").click();
       
 			//5) Click on ROOMS & GUESTS and click 2 Adults and one Children(age 12). Click Apply Button.
-      driver.findElementByXPath("//input[@data-cy='guest']").click();
+    			driver.findElementByXPath("//input[@data-cy='guest']").click();
 			Actions action= new Actions(driver);
 			WebElement child=driver.findElementByXPath("//li[@data-cy='children-1']");
 			action.moveToElement(child).build().perform();
